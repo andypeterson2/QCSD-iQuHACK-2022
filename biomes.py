@@ -9,7 +9,6 @@ from util import *
 # 'use strict';
 # const util = require('./util');
 
-from pickle import FALSE
 
 
 def biome(ocean, water, coast, temperature, moisture):
@@ -61,7 +60,7 @@ def biome(ocean, water, coast, temperature, moisture):
 
 def assign_r_coast(r_coast, mesh, r_ocean):
     r_coast.length = mesh.numRegions
-    r_coast.fill(FALSE)
+    r_coast.fill(False)
     
     out_r = []
     for r1 in range(0,mesh.numRegions):
@@ -69,7 +68,7 @@ def assign_r_coast(r_coast, mesh, r_ocean):
         if not r_ocean[r1]:
             for r2 in out_r:
                 if r_ocean[r2]:
-                    r_coast[r1] = TRUE
+                    r_coast[r1] = True
                     break
     return r_coast
 
@@ -99,9 +98,9 @@ def assign_r_temperature(
     return r_temperature
 
 
-
- #Biomes assignment -- see the biome() function above
- #
+#
+# Biomes assignment -- see the biome() function above
+#
 def assign_r_biome(
     r_biome,
     mesh,
