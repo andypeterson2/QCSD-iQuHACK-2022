@@ -1,4 +1,5 @@
 import qsharp
+import numpy as np
 from Qrng import QuantumRandomNumberGenerator 
 
 def qrng(max):
@@ -13,3 +14,10 @@ def qrng(max):
       # Transform bit string to integer
       output = int("".join(str(x) for x in bit_string), 2) 
   return output
+
+def qnoise(length, width):
+  bmp = np.zeros(length*width)
+  for i in range(length):
+    for j in range(width):
+      bmp[i*width + j] =QuantumRandomNumberGenerator.simulate()
+  return np.reshape(bmp, (length, width))
