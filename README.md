@@ -5,3 +5,9 @@ An adaptation of Amit Patel's [mapgen2](https://github.com/redblobgames/mapgen2/
 # Background
 
 Inspired by [Amit Patel](https://twitter.com/redblobgames)'s article [Polygonal Map Generation for Games](http://www-cs-students.stanford.edu/~amitp/game-programming/polygon-map-generation), we sought to reimagine and remake this project in Python and utilize the inherent properties of quantum hardware which allow for creating true randomness.
+
+
+# Imports
+
+We imported using pip3 install.
+qsharp, qutip
