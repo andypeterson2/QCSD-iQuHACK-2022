@@ -84,7 +84,7 @@ def assign_r_coast(r_coast, mesh, r_ocean):
 # the southernmost get bias_south added; in between it's a blend.
 #
 def assign_r_temperature(
-    r_temperature,
+    r_temperature,  
     mesh,
     r_ocean, r_water,
     r_elevation, r_moisture,
