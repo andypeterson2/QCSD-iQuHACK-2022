@@ -13,8 +13,8 @@ def assign_r_water(r_water, mesh, noise, params):
             nx = (mesh.r_x(r) - 500) / 500
             ny = (mesh.r_y(r) - 500) / 500
             distance = math.max(math.abs(nx), math.abs(ny))
-            n = util.fbm_noise(noise, params.amplitudes, nx, ny)
-            n = util.mix(n, 0.5, params.round)
+            n = fbm_noise(noise, params.amplitudes, nx, ny)
+            n = mix(n, 0.5, params.round)
             r_water[r] = n - (1.0 - params.inflate) * distance*distance < 0
 
     return r_water
