@@ -1,3 +1,3 @@
 from qrng import *
 
-# print(qrng(100))
+print(qnoise(10,10))
